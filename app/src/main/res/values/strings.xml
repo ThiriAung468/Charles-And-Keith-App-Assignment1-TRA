@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Charles-And-Keith-App-Assignment-TRA</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="empty_msg">"Cannot Show Data Anything While Offline."</string>
+
+
+</resources>
