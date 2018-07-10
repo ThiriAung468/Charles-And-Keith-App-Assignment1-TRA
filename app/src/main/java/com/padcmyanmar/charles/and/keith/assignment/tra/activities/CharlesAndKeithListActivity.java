@@ -160,6 +160,8 @@ public class CharlesAndKeithListActivity extends BaseActivity implements Charles
 
         mcharlesAndKeithListOneAdapter.appendNewsList(event.getNewProductsList());
         swipeRefreshLayout.setRefreshing(false);
+        vpEmpty.setVisibility(View.GONE);
+        rvShowListOne.setVisibility(View.VISIBLE);
     }
 
     @Subscribe(threadMode = ThreadMode.MAIN)
@@ -167,10 +169,11 @@ public class CharlesAndKeithListActivity extends BaseActivity implements Charles
         swipeRefreshLayout.setRefreshing(false);
         Snackbar.make(swipeRefreshLayout, event.getErrorMsg(), Snackbar.LENGTH_INDEFINITE).show();
 
-        if(mcharlesAndKeithListOneAdapter.getItemCount()<0) {
+       /* if(mcharlesAndKeithListOneAdapter.getItemCount()<0) {
             vpEmpty.setVisibility(View.VISIBLE);
-        }else  vpEmpty.setVisibility(View.GONE);
-
+        }else  vpEmpty.setVisibility(View.GONE);*/
+        vpEmpty.setVisibility(View.VISIBLE);
+        rvShowListOne.setVisibility(View.GONE);
     }
 
     @Subscribe(threadMode = ThreadMode.MAIN)
